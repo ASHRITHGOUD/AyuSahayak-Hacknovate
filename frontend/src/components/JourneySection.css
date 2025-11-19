@@ -1,0 +1,67 @@
+.journey-section {
+  padding: 80px 8%;
+  background: linear-gradient(145deg, #f0f7ff 0%, #ffffff 50%, #f5faff 100%);
+}
+
+.journey-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+/* LEFT IMAGE */
+.journey-image-box {
+  width: 50%;
+  background: #e9f3ff;
+  padding: 24px;
+  border-radius: 22px;
+  box-shadow: 0px 8px 18px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: center;
+}
+
+.journey-image {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* RIGHT TEXT PART */
+.journey-text-box {
+  width: 50%;
+}
+
+.journey-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1f2a44;
+  margin-bottom: 16px;
+}
+
+.journey-title span {
+  color: #0a3d91;
+}
+
+.journey-desc {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .journey-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .journey-image-box,
+  .journey-text-box {
+    width: 100%;
+  }
+
+  .journey-image {
+    width: 82%;
+  }
+}

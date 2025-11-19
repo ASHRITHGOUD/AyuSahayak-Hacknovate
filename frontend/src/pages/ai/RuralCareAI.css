@@ -1,0 +1,345 @@
+/* ---------- Scoped to AI Page Only ---------- */
+.rural-ai-page {
+  --primary: #1a6fd0;
+  --accent: #2fa6ff;
+  --accent-2: #6bc9ff;
+
+  --bg: #eef6ff;
+  --card: #ffffff;
+  --glass: rgba(255, 255, 255, 0.6);
+  --muted: #567a9d;
+  --glass-border: #d3e3f7;
+
+  background: linear-gradient(180deg, #e6f1ff 0%, #f9fbff 65%);
+  color: #113a63;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+/* Reset inside rural-ai-page */
+.rural-ai-page * {
+  box-sizing: border-box;
+  font-family: Inter, ui-sans-serif, system-ui, "Segoe UI", Arial;
+}
+
+/* App shell */
+.rural-ai-page .app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 18px;
+}
+
+.rural-ai-page .app-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0 18px 0;
+}
+
+.rural-ai-page .brand {
+  font-weight: 800;
+  font-size: 24px;
+  color: var(--primary);
+}
+
+/* main area */
+.rural-ai-page .main-area {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.rural-ai-page .chat-window {
+  width: 96%;
+  max-width: 1250px;
+  background: var(--card);
+  border-radius: 18px;
+  padding: 20px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 24px rgba(20, 80, 140, 0.12);
+}
+
+/* layout columns */
+.rural-ai-page .messages-and-agents {
+  display: flex;
+  gap: 16px;
+  height: 78vh;
+}
+
+.rural-ai-page .chat-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.rural-ai-page .agents-column {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* messages area */
+.rural-ai-page .messages {
+  flex: 1;
+  padding: 20px;
+  overflow: auto;
+  background: #f3f8ff;
+  border-radius: 14px;
+  border: 1px solid #d3e3f7;
+}
+
+/* Input */
+.rural-ai-page .input-bar {
+  display: flex;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 12px;
+  background: #eef6ff;
+  border: 1px solid #d3e3f7;
+}
+
+.rural-ai-page .input-bar input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  background: white;
+  color: #113a63;
+  border: 1px solid #d3e3f7;
+  outline: none;
+}
+
+.rural-ai-page .input-bar button {
+  margin-left: 10px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.rural-ai-page .input-bar button:hover {
+  transform: translateY(-2px);
+}
+
+/* message bubbles */
+.rural-ai-page .message-bubble {
+  max-width: 78%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0, 60, 120, 0.12);
+  white-space: pre-wrap;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.rural-ai-page .message-bubble.bot {
+  align-self: flex-start;
+  background: #eef6ff;
+  border: 1px solid #d3e3f7;
+  color: #113a63;
+}
+
+.rural-ai-page .message-bubble.user {
+  align-self: flex-end;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #ffffff;
+  border-bottom-right-radius: 0;
+}
+
+/* thinking */
+.rural-ai-page .thinking-status {
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: #eef6ff;
+  color: var(--muted);
+  font-style: italic;
+  text-align: center;
+  margin: 8px 0;
+  border: 1px solid #d3e3f7;
+}
+
+/* agent cards */
+.rural-ai-page .agent-card {
+  background: white;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid #d3e3f7;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 60, 120, 0.08);
+}
+
+.rural-ai-page .agent-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 60, 120, 0.15);
+}
+
+/* head */
+.rural-ai-page .agent-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rural-ai-page .agent-left {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.rural-ai-page .agent-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #eef6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  border: 1px solid #d3e3f7;
+}
+
+.rural-ai-page .agent-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.rural-ai-page .agent-title {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--primary);
+}
+
+.rural-ai-page .agent-sub {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* badge */
+.rural-ai-page .agent-badge {
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.rural-ai-page .badge-idle {
+  background: #dce9f9;
+  color: #4c709a;
+}
+
+.rural-ai-page .badge-run {
+  background: #ffe6aa;
+  color: #6b4c00;
+}
+
+.rural-ai-page .badge-done {
+  background: #c9f7dd;
+  color: #035f2e;
+}
+
+/* collapse body */
+.rural-ai-page .agent-body {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 14px;
+  background: #f3f8ff;
+  border: 1px solid #d3e3f7;
+  max-height: 2000px;
+  overflow: visible;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.rural-ai-page .agent-card.collapsed .agent-body {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.rural-ai-page .agent-output {
+  white-space: pre-wrap;
+  color: #113a63;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* wrapper */
+.rural-ai-page .message-wrapper {
+  display: flex;
+  width: 100%;
+  margin: 6px 0;
+}
+
+.rural-ai-page .message-wrapper.bot { justify-content: flex-start; }
+.rural-ai-page .message-wrapper.user { justify-content: flex-end; }
+
+/* banner */
+.rural-ai-page .banner {
+  padding: 20px;
+  margin: 14px 0;
+  border-radius: 16px;
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  border: 1px solid #d3e3f7;
+}
+
+.rural-ai-page .banner-title {
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #113a63;
+}
+
+.rural-ai-page .banner.low {
+  background: #e9ffe9;
+  border-left: 6px solid #2ebf6b;
+}
+
+.rural-ai-page .banner.medium {
+  background: #fff7e5;
+  border-left: 6px solid #ffb03a;
+}
+
+.rural-ai-page .banner.high {
+  background: #ffe9e9;
+  border-left: 6px solid #ff5c5c;
+}
+
+/* Back Button */
+.back-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.back-button {
+  background: var(--primary);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.back-button:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}

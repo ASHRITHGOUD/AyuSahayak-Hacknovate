@@ -1,0 +1,117 @@
+/* FIXED NAVBAR */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.08);
+  z-index: 999;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+/* MAIN CONTAINER – moves slightly left */
+.nav-container {
+  width: 86%;              /* was 90% → brings entire bar slightly left */
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO AREA */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: -15px;      /* small left pull for perfect alignment */
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: contain;
+  padding: 4px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.12);
+}
+
+.nav-logo a {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0a3d91;
+  text-decoration: none;
+}
+  /* small utility to offset content beneath fixed navbar */
+.with-navbar {
+  padding-top: calc(80px + 1rem); /* navbar height (80px) + small gap */
+}
+
+/* spacer used by Navbar.jsx to push page content below fixed navbar */
+/* .nav-spacer {
+  height: calc(80px + 5px);
+  width: 100%;
+} */
+
+/* MENU */
+.nav-menu {
+  display: flex;
+  gap: 22px; /* uniform spacing between all items */
+  list-style: none;
+  align-items: center;
+}
+
+.nav-item a, .nav-item > a, .nav-item > .role-item, .nav-item > .public-item {
+  display: inline-block;
+}
+
+.nav-menu a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2a44;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.nav-menu a:hover {
+  color: #0a3d91;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+  padding: 10px 22px;
+  background: #0d47a1;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 12px #0d48a1a4;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px #0d47a1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-container {
+    width: 92%;
+  }
+
+  .nav-logo {
+    margin-left: 0;
+  }
+}
+
+

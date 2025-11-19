@@ -1,0 +1,61 @@
+/* Wrapper Section */
+.affordable-section {
+  position: relative;
+  width: 100%;
+  height: 420px;        /* Same height as the MedyMate section */
+  overflow: hidden;
+}
+
+/* Background image (your waves + doctor) */
+.affordable-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* keeps waves & doctor perfect */
+  z-index: 1;
+}
+
+/* TEXT AREA */
+.affordable-text {
+  position: absolute;
+  top: 110px;       /* moves text down onto waves */
+  left: 8%;
+  z-index: 5;
+  width: 45%;       /* space like original */
+  color: white;
+}
+
+/* Heading */
+.affordable-title {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+/* Paragraph */
+.affordable-para {
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 550px;
+  color: #ecf3ff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .affordable-section {
+    height: 550px;
+  }
+
+  .affordable-text {
+    top: 40%;
+    left: 5%;
+    width: 90%;
+  }
+
+  .affordable-title {
+    font-size: 28px;
+  }
+}

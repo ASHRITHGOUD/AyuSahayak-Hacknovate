@@ -1,0 +1,186 @@
+/* Section Wrapper */
+.intro-section {
+  padding: 80px 8%;
+  background: #ffffff;
+}
+
+/* Top Center Heading */
+.intro-top {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.intro-main-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0a3d91;
+}
+
+.intro-sub {
+  margin-top: 12px;
+  font-size: 17px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Two Column Layout */
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Left VIDEO Box */
+.intro-left {
+  width: 48%;
+}
+
+/* Updated video container */
+.intro-video-box {
+  background: #e9f3ff;
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Updated video styling */
+.intro-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+/* Right Text */
+.intro-right {
+  width: 48%;
+}
+
+.intro-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #1f2a44;
+}
+
+.intro-title span {
+  color: #0a3d91;
+}
+
+.intro-description {
+  font-size: 17px;
+  line-height: 1.65;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.intro-btn {
+  padding: 12px 26px;
+  background: linear-gradient(90deg, #0a3d91, #1f65d9);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0px 4px 12px rgba(10,61,145,0.3);
+}
+
+.intro-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 16px rgba(10,61,145,0.4);
+}
+
+/* ---------- ✅ MODAL POPUP STYLING ---------- */
+
+.intro-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.intro-modal {
+  background: #fff;
+  width: 70%;
+  max-height: 80vh;
+  border-radius: 12px;
+  padding: 25px;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0px 12px 28px rgba(0,0,0,0.25);
+  animation: fadeIn 0.25s ease;
+}
+
+/* Modal Close Button */
+.modal-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Modal Title */
+.modal-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0a3d91;
+  margin-bottom: 15px;
+}
+
+/* Scrollbar */
+.intro-modal::-webkit-scrollbar {
+  width: 6px;
+}
+.intro-modal::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 3px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-left,
+  .intro-right {
+    width: 100%;
+  }
+
+  .intro-modal {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .intro-title {
+    font-size: 26px;
+  }
+}
